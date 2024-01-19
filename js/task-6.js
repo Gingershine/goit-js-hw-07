@@ -14,13 +14,11 @@ const destroyBoxes = () => boxes.textContent = '';
 
 function createBoxes(amount) {
   destroyBoxes();
-    let size = 30;
   if (amount >= 1 && amount <= 100) {
     for (let i = 0; i < amount; i++) {
-      size += 10;
+      let size = 30 + i * 10;
       const box = `<div style="width: ${size}px; height:${size}px; background-color: ${getRandomHexColor()};"></div>`;
-      boxes.insertAdjacentHTML('beforeend', box); 
-      console.log(size);
+      boxes.insertAdjacentHTML('beforeend', box);       
     } input.value = '';
 }
 }
